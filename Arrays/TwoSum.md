@@ -25,5 +25,7 @@
   
 5. If Count the number of pairs asked in Sorted:
 - Two pointer greedily
-- 
+- if sum found then for counting 2 cases:
+- Case 1: if nums[i]=nums[j] => cnt = j-i+1 and c+= cnt*(cnt-1)/2 and break (IMP) since for case 2 calc has no condition, thus break is imp here if this condition works
+- Case 2: lC = rC = 1, calc duplicates on left and on right, then multiply along with i++ and j-- again. 
 - TC: 𝑂(nlogn) if sorting is needed, otherwise O(n), SC: O(1)

@@ -19,5 +19,9 @@
 
 3. OS:
 - Two pointer approach
-- 
+- Duplicates check is done for each i, j, k as a substitute set data structure 
+- Keep in mind for i duplicates check, check i AFTER incrementing i hence => if(i>0 && nums[i] == nums[i-1]) continue;
+- Initialise j and k, loop while(j<k)
+- Check for target sum greedily
+- If found, push triplet into ans, update j&k and check duplicates for j and k similarly, these checks are also AFTER incrementing {Keep in mind}
 - TC: O(NlogN)+O(N^2) sorting + TwoPointer * i loop, SC: O(1)

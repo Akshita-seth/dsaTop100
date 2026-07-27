@@ -10,6 +10,15 @@
 - SC: O(n.k), Sorting O(1) or O(k) depending on sorting algo, here assumed O(1), Group stored O(n.k)
 
 2. BS:
-- The idea is that if we sort two strings which are anagrams of each other, then the sorted strings will always be the same.
+- The idea is that if we sort two strings that are anagrams of each other, then the sorted strings will always be the same.
 - So, we can maintain a hash map with the sorted strings as keys and the index of the anagram group in the result array as the value.
+- Create a map {string -> index} this index will be anagrams i.e. ans vector size everytime
+- Start i loop, sort the string at i, if not present in map => mpp[str] = anagram.size() and push an empty vector in ans vector anagram as reserving a space for group if added in future
+- No push original string at i into anagram[mpp[str]] i.e. the index of the sorted string
+- TC: O(n. klogk) Sorting each word: O(klogk), For n words: O(n. klogk), Hash insertions: O(n)
+- SC: O(n.k) Hash map storing groups
+
+3. OS:
+- Anagrams have the same frequency of every character. Use the character frequency of each string as a unique key to group all its anagrams together.
 - 
+

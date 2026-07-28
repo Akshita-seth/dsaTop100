@@ -58,6 +58,25 @@ stringstream ss(s);
 string word;
 while (ss >> word) { ... }  // split by spaces
 
+string s = "10,20,30";
+stringstream ss(s);
+string token;
+
+while (getline(ss, token, ',')) {   // ',' is the delimiter
+    int num = stoi(token);          // convert string → int
+    cout << num << " ";
+}
+
+string s = "apple banana cherry";
+stringstream ss(s);
+string word;
+
+while (ss >> word) {
+    cout << word << endl;   // prints each word
+}
+
+
+
 
 # Python
 len(s) → length of string
@@ -95,7 +114,8 @@ s.capitalize() → first character uppercase, rest lowercase
 s.title() → capitalize each word
 
 s.swapcase() → swap uppercase ↔ lowercase
-Checks:
+
+- Checks:
 
 s.isupper() / s.islower()
 

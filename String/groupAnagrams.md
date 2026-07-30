@@ -20,5 +20,15 @@
 
 3. OS:
 - Anagrams have the same frequency of every character. Use the character frequency of each string as a unique key to group all its anagrams together.
-- 
+- Frequency arrays are faster when word length is large.
+- The delimiter ('#','$',',') is purely to avoid collisions when serializing the frequency array into a string key for the hash map:
+Word = "abb", Frequency: a=1, b=2, Key (no separator): "12"
+Now imagine a slightly different case:
+Word = "aaaaaaaaaaa b" (11 a’s, 1 b), Frequency: a=11, b=1, Key (no separator): "111"
+"111" could also mean "a=1, b=11" if you just read digits in sequence.
+So "a=11, b=1" and "a=1, b=11" both collapse into "111" — collision.
+- So use helper fn to create the hash of every string, then in groupAnagram fn similar to BS:
+- Use map {string -> index}, check if not present in map, add in map with index as result.size() and pushing empty vector in res so as to reserve place for string.
+- Outside, add result[mpp[key]].push_back(arr[i])
+- TC: O(n*k), where n is the number of words and k is the maximum length of a word. SC: O(n*k).
 

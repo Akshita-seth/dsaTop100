@@ -13,7 +13,16 @@ s.rfind("abc") → last occurrence index
 
 s.compare(str) → lexicographic comparison
 
-s.append(str) / s += str → concatenate
+s.append(str) / s += str → concatenate 
+ - currString.append("hello");          // append a C-string
+ - currString.append(otherString);      // append another std::string
+ - currString.append('x');  // error: 'x' is a char, not a string
+
+ - What to use for a single character?
+ - currString.append(1, 'x');           // append 1 copy of char 'x'
+ - currString.append(5, '!');           // append 5 copies of '!'
+ - or simply:  currString.push_back(ch);
+
 
 s.insert(pos, str) → insert substring
 

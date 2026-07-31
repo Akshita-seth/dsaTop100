@@ -23,6 +23,10 @@
 1. BFS [Just mention this in interview, no need to code]
 - Checking all subarrays
 - Naively, I brute force by flipping each zero and checking the streak
+- Initialise maxi with 0
+- In the i loop, initialise flip and len as 0
+- Then in j loop, j starts from i, if 0 is encountered flip++; if flips becomes > 1, break the j loop
+- In outer loop update maxi with max of maxi and len
 - TC: O(n^2), SC: O(1)
 
 2. OS: GREEDY approach
@@ -40,8 +44,29 @@
 - Expand right as you traverse. using for loop
 - If the window has more than one zero, shrink left until only one zero remains. using while loop
 - Track the maximum window length
+- TC: O(n), SC: O(1)
 
 ## Max Consecutive Ones III
+1. BFS [Just mention this in interview, no need to code]
+- Checking all subarrays
+- Naively, I brute force by flipping each zero and checking the streak
+- Initialise maxi with 0
+- In the i loop, initialise flip and len as 0
+- Then in j loop, j starts from i, if 0 is encountered flip++; if flips becomes > 1, break the j loop
+- In outer loop update maxi with max of maxi and len
+- TC: O(n^2), SC: O(1)
 
+2. BS: Sliding Window [Expected in Interviewa]
+- Maintain a window [left, right] that contains at most one zero.
+- Expand right as you traverse. using for loop
+- If the window has more than k zeros, shrink left until only one zero remains. using while loop
+- Track the maximum window length
+- O(N^2)>TC>O(N) bcz  0<k<n, CS: O(1)
+
+3. OS: Two pointer Approach
+- In prev, SW approach -> right pointer waits until left shrinks, here right won't wait
+- Just change the "while" in shrinking part to "if"
+- One more thing, with or without maxi both are correct.
+- If updating maxi is not done at every step at the end of loop, we can simply return n-left;
 
 

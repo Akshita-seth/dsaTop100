@@ -9,7 +9,7 @@
 2. BS:
 - Use HashSet to find the third element.
 - Use a set to store vector of triplets initially; At last, before return, convert to vector of vectors by vector<vector<int>> ans(st.begin(), st.end())
-- Start i loop, then initialise a hashSet
+- Start i loop, then initialise a hashSet, Set to store elements seen in this iteration: set<int> hashset;
 - Start j loop with i+1 since not using same val twice
 - Calc third as complement and check in hashSet
 - If yes, create temp vector -> sort it -> insert in set ans , also insert nums[j] in hashSet => All these done in j loop

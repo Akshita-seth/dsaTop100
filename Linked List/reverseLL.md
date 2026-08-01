@@ -10,5 +10,10 @@
 2. OS Iterative:
 - Links are also reversed.
 - Edge case resolve
-- 
+- The idea is to reverse the linked list by changing the direction of links using three pointers: prev, curr, and next. At each step, point the current node to its previous node and then      move all three pointers forward until the list is fully reversed.
+- Initially: prev null, curr head
+- while(curr != NULL) {}
+- return prev;
+- TC: O(n), SC:O(1)
+  
 2. OS Recursive:

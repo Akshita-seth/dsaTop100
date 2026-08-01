@@ -10,3 +10,5 @@
 - loop while fast != null && fast->next != null
 - move fast and slow, checek if fast and slow same, if yes return true
 - TC: O(n), SC: O(1)
+  ##### Remember: in case of dining mid of linkedlist => os: just return slow pointer => TC: O(N/2)
+  - and for BFS: just count total nodes - c by traversing the list, calc mid = c/2 + 1, again traverse list till mid = 0 by decrementing mid inside loop, just return the pointer temp uptil that bcs break done when mid == 0 => TC: O(N + N/2)

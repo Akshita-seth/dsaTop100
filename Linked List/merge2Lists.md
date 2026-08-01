@@ -8,5 +8,9 @@
 
 2. OS:
 - Using dummy node
--  TC: O(M+N) since both lists traversed once
-Sc: O(1)
+- curr = dummy
+- while(l1 && l2)
+- Append the smaller value out of l1 and l2 to curr, under each id move l1 and l2 correspondingly
+- Move curr at the end of loop
+- Whichever out of the 2 exeist just directly: curr->next = l1 or l2
+- TC: O(M+N) since both lists traversed once,  SC: O(1)

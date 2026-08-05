@@ -14,7 +14,7 @@
 - Calc third as complement and check in hashSet
 - If yes, create temp vector -> sort it -> insert in set ans , also insert nums[j] in hashSet => All these done in j loop
 - DND: Do not insert the complement in hashSet (third). Otherwise, you’re storing the complement instead of the actual number you’ve seen, which breaks the logic.
-- TC: O(n^3) * O(log(no. of triplets)) sice insertion in set is logN as it is unique   
+- TC: O(n^2) * O(log(no. of triplets)) since insertion in set is logN as it is unique   
 - SC: O(2*(no. of triplets)) for set and result
 
 3. OS:

@@ -40,7 +40,8 @@
     - Check right child → decide whether to descend or process.
     - Process when no right → children done, now root.
     - Backtrack → climb up and finish ancestors.
-    - TC: O(2N) SC: O(N)
+    - TC: O(2N) bcz FIRST THE TREE IS TRAVERSED AND NODES ARE PUSHED INTO THE STACK, WHILE COMING BACK, EACH NODE IS CHECKED AND PUSHED IN ANS VECTOR. HENCE VISITED TWICE.
+    - SC: O(N)
 
 
 ### Big Picture Intuition

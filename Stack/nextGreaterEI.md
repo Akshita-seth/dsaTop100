@@ -1,7 +1,7 @@
 1. BFS:
 - Nested loop i=0 and j=i+1
-- Imp to initialize size of ans vector
-- Imp to break after nge found for every index; otherwise, -1
+- Imp to initialize size of ans vector filled with -1.
+- Imp to break after nge found for every index; otherwise, -
 - TC: O(N^2)  SC: O(1)
 
 2. OS:

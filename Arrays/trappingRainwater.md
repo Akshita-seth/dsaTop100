@@ -19,3 +19,18 @@
 -  If they’re placed outside, the pointer moves every iteration — but it’s still correct because when boundaries are updated, water at that index is zero, so skipping forward is safe.
 - Similar for maxRight in else i.e. height[right] > height[left]
 - TC: O(n) SC: O(1)
+
+3. OS Using Stack:
+- Traverse bars left to right.
+- If current bar is taller:
+- Pop the stack (this is the valley bottom).
+- If stack becomes empty → no left boundary → break.
+- Else:
+     Left boundary = new stack top.
+     Right boundary = current bar.
+     Width = i - st.top() - 1.
+     Height = min(height[i], height[st.top()]) - height[valley].
+    Water += width × height.
+- Continue until end.
+- Push index if current bar is not taller than stack top.
+- TC: O(N) SC: O(N)

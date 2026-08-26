@@ -23,4 +23,13 @@
 - SC: O(2N) + O(2N)
 
 3. OS 2: Obe stack soln
--
+- Monotonically increasing stack
+- When a shorter bar is encountered, it means the bar at the top of the stack cannot extend further to the right.
+- We pop it, and using the current index as the right boundary and the new top of the stack as the left boundary, compute the area with the popped     bar’s height as the smallest height.
+- Height = heights[top]  (before popping)
+- Right boundary = i (current index, NSE)
+- Left boundary = st.empty() ? -1 : st.top() (PSE after popping)
+- Width = i - left - 1
+- Area = heights[top] * width
+- TC: O(N) for traversal + O(N) for every every index altogether once
+- SC: O(N) just the stack

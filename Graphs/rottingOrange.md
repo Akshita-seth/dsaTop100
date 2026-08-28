@@ -1,0 +1,14 @@
+1. BFS: grid-based
+- Initialize queue and fresh orange count
+- Add all rotten oranges to queue
+- If no fresh, return zero immediately
+- Start BFS loop, increment minutes each round
+- Process current queue size level-wise
+- For each orange, check four directions
+- Rot fresh orange, decrement fresh count
+- Push newly rotten orange into queue
+- Continue until queue becomes empty
+- Return minutes if fresh equals zero
+- Else return negative one (unreachable)
+- TC O(n × n × 4) In the worst case, every cell in the grid may contain an orange, and for each rotten orange we explore 4 directions (up, down, left, right). 
+- SC: O(n × n) In the worst case, all the oranges might be rotten and will be stored in the queue simultaneously. 

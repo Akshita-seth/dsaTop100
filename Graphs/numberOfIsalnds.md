@@ -24,3 +24,8 @@
 - then calculate neighbours i.e. nr and nc
 - checked condition if true => mark visited, q.push({nr,nc})
 - TC: O(m.n) SC: O(m.n)
+
+
+3. BFS Without visited array [Since modifies given input so don'tuse, just know]
+- BFS without visited array, not advised in interviews but u should know how flipping 1's in grid to 0 when visited saves the memory of extra visisted matrix. 
+- The grid values with 0 i.e. water are not traversed by the loop; similarly, the grid values with 0 i.e. already visited ones will also not be traversed again.

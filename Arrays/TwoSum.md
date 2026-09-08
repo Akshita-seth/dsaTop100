@@ -17,7 +17,9 @@
 
 4. If Count the number of pairs asked in Unsorted:
 - Build hashmap separately, {val -> freq}
-- Then traverse the hashmap x as curr val and y as complement
+- Then traverse the hashmap x as curr val and y as complement (Reason why we traverse the hashmapa nd not the array:)              - unordered_map already compresses duplicates into one entry.
+          - Looping over arr reintroduces duplicates and causes overcounting.
+          - Looping over freq ensures each unique number is processed exactly once.
 - if complement exists in map then 2 cases for counting:
 - Case 1: if x=y => Choose 2 out of freq[x] nC2 formula c += freq[x] * freq[x]-1 / 2
 - Cade 2: else if(x<y) =? c+= freq[x]*freq[y], else if(x<y) is done for skiping to count same pair (x,y) as (y,x) in future iterations

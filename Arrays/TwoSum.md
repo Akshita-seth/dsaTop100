@@ -28,6 +28,6 @@
 5. If Count the number of pairs asked in Sorted:
 - Two pointer greedily
 - if sum found then for counting 2 cases:
-- Case 1: if nums[i]=nums[j] => cnt = j-i+1 and c+= cnt*(cnt-1)/2 and break (IMP) since for case 2 calc has no condition, thus break is imp here if this condition works
+- Case 1: if nums[i]=nums[j] => cnt = j-i+1 and c+= cnt*(cnt-1)/2 and break (IMP) Use break when arr[i] == arr[j] because you’ve exhausted all possible pairs in that segment. The loop exits immediately. Why? Because once you’ve counted all pairs among identical elements, there’s nothing left to check. As it was a sorted array, t is always the last part of the i j traversal. The break happens at the last part of the i–j traversal, when the two pointers meet in a block of identical values.
 - Case 2: lC = rC = 1, calc duplicates on left and on right, then multiply along with i++ and j-- again. 
 - TC: 𝑂(nlogn) if sorting is needed, otherwise O(n), SC: O(1)

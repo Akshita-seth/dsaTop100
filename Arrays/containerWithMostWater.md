@@ -8,6 +8,6 @@
 2. OS:
 - Two pointers approach
 - left and right pointers set, loop while(l<r)
-- calc area similar to above, then 
+- calc area similar to above, then  [REMEMBER: width = r-l and not r-l+1] since width is the width withing the rigth and left bars
 - Always move the pointer that points to the lower line.
 - TC: O(n) SC: O(1)

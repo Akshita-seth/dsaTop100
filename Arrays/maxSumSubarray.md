@@ -16,3 +16,4 @@
 - Worse Situation, you’d compare nums[0] against curr + nums[0], which is like adding it twice.
 - Wrong sum (nums[0] twice) gets carried forward
 - TC: O(N), SC:O(1)
+- OR: Initialise currSum = 0, maxSUm = nums[0] and start loop with i=0 =? also correct

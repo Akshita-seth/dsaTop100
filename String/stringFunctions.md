@@ -8,6 +8,7 @@ s[i] → access character at index
 s.substr(pos, len) → substring  
 
 ex: string s = "xxabcxxabcxx"; 
+
 s.find("abc") → first occurrence index (or npos)  O/P: 2
 
 s.rfind("abc") → last occurrence index  O/P: 7

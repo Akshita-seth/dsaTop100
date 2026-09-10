@@ -30,7 +30,7 @@ s.insert(pos, str) → insert substring
 
 s.erase(pos, len) → erase substring
 
-s.replace(pos, len, str) → replace substring
+s.replace(pos, len, str) → replace substring  (len => numbers of charaters to replace incl. pos index since inclusive)
 
 s.c_str() → convert to C‑style char array
 

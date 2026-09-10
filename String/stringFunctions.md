@@ -63,6 +63,7 @@ Unique & frequency:
 unique(s.begin(), s.end()) → remove consecutive duplicates
 
 count(s.begin(), s.end(), 'a') → count occurrences of a char
+=> int result = count(s.begin(), s.end(), 'a');
 
 Stringstream parsing:
 stringstream ss(s);

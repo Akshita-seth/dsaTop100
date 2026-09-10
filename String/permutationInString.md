@@ -15,7 +15,9 @@ A permutation means the arrangement can change, but the multiset of characters m
 2. OS:
 - Use character frequency arrays + sliding window:
 - Build s1 freq array
-- initialise a len1 size window on s2 and build freq array
+- initialise a len1 size window on s2 and build freq array  but remember:
+      for (int i = 0; i < l1 && i < l2; i++) freq2[s2[i] - 'a']++;
+       WHY 2 conditions? i < l2 → You must not go past the length of s2. If s2 is shorter than s1, this prevents out‑of‑bounds access.
 - Initial window comparison: freq1 == freq2
 - Slide window across s2: loop from i=len1 to i<len2 
   adding new char: freq2[s2[i]-'a']++;  and removing leftmost char: freq2[s2[i - len1] - 'a']--;

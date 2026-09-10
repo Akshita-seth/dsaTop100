@@ -21,3 +21,9 @@
  - At the end, candidate is the majority element.
  - Calculating majority element in linear time and constant space
  - TC: O(n), SC: O(1)
+ - Boyer–Moore Majority Vote Algorithm Intuition
+   - You keep a candidate and a count.
+   - When you see the same number as the candidate, you increase the count (like gaining support).
+   - When you see a different number, you decrease the count (like losing support).
+   - If the count drops to zero, you pick the new number as the candidate (like switching allegiance).
+   - Because the majority element has more than half the votes, it can’t be completely canceled out — it will always re-emerge as the candidate.

@@ -8,7 +8,10 @@
 - We maintain three pointers: low → boundary for 0s, mid → current element being checked, high → boundary for 2s
 - DNF partitions the array into three regions dynamically
 - Traverse with mid: while(mid <=high)
-- If nums[mid] == 0 → swap with low, increment both.
+- If nums[mid] == 0 → swap with low, increment both.  
 - If nums[mid] == 1 → just increment mid.
 - If nums[mid] == 2 → swap with high, decrement high.
 - TC: O(n) SC:O(1)
+- ✅ Key insight:  
+     We increment mid after swapping with low because the swapped-in value is already processed and safe.
+     We don’t increment mid after swapping with high because the swapped-in value is unprocessed and must be checked.

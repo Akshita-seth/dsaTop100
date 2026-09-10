@@ -5,11 +5,12 @@ s.empty() → check if string is empty
 
 s[i] → access character at index
 
-s.substr(pos, len) → substring
+s.substr(pos, len) → substring  
 
-s.find("abc") → first occurrence index (or npos)
+ex: string s = "xxabcxxabcxx"; 
+s.find("abc") → first occurrence index (or npos)  O/P: 2
 
-s.rfind("abc") → last occurrence index
+s.rfind("abc") → last occurrence index  O/P: 7
 
 s.compare(str) → lexicographic comparison
 

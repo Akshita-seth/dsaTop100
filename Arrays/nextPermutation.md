@@ -23,7 +23,7 @@
 - Now loop from right end to idx and find number next greater to idx value and swap with the first value u get greater
   The suffix (to the right of idx) is guaranteed to be descending (because idx was the first drop).
 So:
-
 If we scan from the right, the first element we encounter that’s greater than nums[idx] is automatically the smallest possible greater element.
 - For last, we just reverse the suffix from arr.egin() + idx+1 to arr.end() for array
 - TC: O(n) SC: O(1)
+- sort(nums.begin()+idx+1, nums.end());. That works, but since the suffix is guaranteed to be in descending order, you can just reverse it — faster and cleaner.
